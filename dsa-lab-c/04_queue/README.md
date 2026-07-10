@@ -1,5 +1,21 @@
 # Queue Data Structure
 
+## 💻 Programs
+
+1. [`01_front_rear_isempty_isfull.c`](./01_front_rear_isempty_isfull.c) — Queue with Front, Rear, IsEmpty and IsFull operations
+2. [`02_circular_queue.c`](./02_circular_queue.c) — Circular queue implementation using an array
+3. [`03_printer_queue_simulation.c`](./03_printer_queue_simulation.c) — Simulate a printer queue system using a queue
+4. [`04_multiple_queues_single_array.c`](./04_multiple_queues_single_array.c) — Implement multiple queues in a single array
+
+## 🛠️ How to compile & run
+
+```bash
+gcc 01_front_rear_isempty_isfull.c -o output
+./output
+```
+
+Run the same way for any of the other 3 files in this folder — just swap the filename.
+
 ## 📖 Theory
 
 Experiment 4: Queue Data Structure
@@ -173,19 +189,3 @@ IsFull functions wherever applicable.
 4. Write a program to implement multiple queues in a single array.
 
 ---
-
-## 💻 Programs
-
-1. [`01_front_rear_isempty_isfull.c`](./01_front_rear_isempty_isfull.c) — Queue with Front, Rear, IsEmpty and IsFull operations
-2. [`02_circular_queue.c`](./02_circular_queue.c) — Circular queue implementation using an array
-3. [`03_printer_queue_simulation.c`](./03_printer_queue_simulation.c) — Simulate a printer queue system using a queue
-4. [`04_multiple_queues_single_array.c`](./04_multiple_queues_single_array.c) — Implement multiple queues in a single array
-
-## 🛠️ How to compile & run
-
-```bash
-gcc 01_front_rear_isempty_isfull.c -o output
-./output
-```
-
-Run the same way for any of the other 3 files in this folder — just swap the filename.
