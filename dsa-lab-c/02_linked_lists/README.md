@@ -1,12 +1,27 @@
 # Linked Lists (Self-Referential Structures & Dynamic Memory Allocation)
+## 💻 Programs
+
+1. [`01_insert_at_beginning.c`](./01_insert_at_beginning.c) — Insert a node at the beginning of a singly linked list
+2. [`02_delete_from_end.c`](./02_delete_from_end.c) — Delete a node from the end of a singly linked list
+3. [`03_circular_singly_linked_list.c`](./03_circular_singly_linked_list.c) — Implement a circular singly linked list
+4. [`04_menu_driven_linked_list.c`](./04_menu_driven_linked_list.c) — Menu-driven program: insertion, deletion, traversal
+
+## 🛠️ How to compile & run
+
+```bash
+gcc 01_insert_at_beginning.c -o output
+./output
+```
+
+Run the same way for any of the other 3 files in this folder — just swap the filename.
 
 ## 📖 Theory
 
-Lab 2: Linked Lists Using Self-Referential Structures and Dynamic Memory Allocation
-Aim of the Experiment
+Lab 2: Linked Lists Using Self-Referential Structures and Dynamic Memory Allocation.  
+Aim of the Experiment  
 To study and implement linked lists using self-referential structures and dynamic memory
-allocation in C, and to understand the types of linked lists and their applications.
-Learning Objectives
+allocation in C, and to understand the types of linked lists and their applications.  
+Learning Objectives  
 After completing this experiment, the student will be able to:
 - Understand the concept of self-referential structures
 
@@ -87,36 +102,36 @@ int main() {
 struct mystruct *p1, *p2, *p3;
 struct mystruct *temp;
 ```
-/* Dynamic memory allocation */
-p1 = (struct mystruct *)malloc(sizeof(struct mystruct));
-p2 = (struct mystruct *)malloc(sizeof(struct mystruct));
-p3 = (struct mystruct *)malloc(sizeof(struct mystruct));
-/* Assign data and link nodes */
-p1->data = 10; p1->next = p2;
-p2->data = 20; p2->next = p3;
-p3->data = 30; p3->next = NULL;
-/* Traversal of singly linked list */
-temp = p1;
-printf("Singly Linked List:\n");
+/* Dynamic memory allocation */  
+p1 = (struct mystruct *)malloc(sizeof(struct mystruct));  
+p2 = (struct mystruct *)malloc(sizeof(struct mystruct));  
+p3 = (struct mystruct *)malloc(sizeof(struct mystruct));  
+/* Assign data and link nodes */  
+p1->data = 10; p1->next = p2;  
+p2->data = 20; p2->next = p3;  
+p3->data = 30; p3->next = NULL;  
+/* Traversal of singly linked list */  
+temp = p1;  
+printf("Singly Linked List:\n");  
 
-while (temp != NULL) {
-printf("%d -> ", temp->data);
-temp = temp->next;
-}
-printf("NULL\n");
-/* Free allocated memory */
-free(p1);
-free(p2);
-free(p3);
-return 0;
+while (temp != NULL) {  
+printf("%d -> ", temp->data);  
+temp = temp->next;  
+}  
+printf("NULL\n");  
+/* Free allocated memory */  
+free(p1);  
+free(p2);  
+free(p3);  
+return 0;  
 }
 
-Doubly Linked List
-Structure Definition:
-struct node {
-int data;
-struct node *prev;
-struct node *next;
+Doubly Linked List  
+Structure Definition:  
+struct node {  
+int data;  
+struct node *prev;  
+struct node *next;  
 };
 
 Example 2: Creation and Traversal of Doubly Linked List
@@ -133,40 +148,40 @@ int main() {
 struct mystruct *p1, *p2, *p3;
 struct mystruct *temp;
 ```
-/* Dynamic memory allocation */
-p1 = (struct mystruct *)malloc(sizeof(struct mystruct));
-p2 = (struct mystruct *)malloc(sizeof(struct mystruct));
-p3 = (struct mystruct *)malloc(sizeof(struct mystruct));
-/* Assign data */
-p1->data = 10;
-p2->data = 20;
-p3->data = 30;
-/* Linking nodes */
-p1->prev = NULL; p1->next = p2;
-p2->prev = p1; p2->next = p3;
-p3->prev = p2; p3->next = NULL;
-/* Forward traversal */
-temp = p1;
-printf("Doubly Linked List (Forward):\n");
-while (temp != NULL) {
-printf("%d <-> ", temp->data);
-temp = temp->next;
-}
-printf("NULL\n");
-/* Backward traversal */
-temp = p3;
-printf("Doubly Linked List (Backward):\n");
-while (temp != NULL) {
+/* Dynamic memory allocation */  
+p1 = (struct mystruct *)malloc(sizeof(struct mystruct));  
+p2 = (struct mystruct *)malloc(sizeof(struct mystruct));  
+p3 = (struct mystruct *)malloc(sizeof(struct mystruct));  
+/* Assign data */  
+p1->data = 10;  
+p2->data = 20;  
+p3->data = 30;  
+/* Linking nodes */  
+p1->prev = NULL; p1->next = p2;  
+p2->prev = p1; p2->next = p3;  
+p3->prev = p2; p3->next = NULL;  
+/* Forward traversal */  
+temp = p1;  
+printf("Doubly Linked List (Forward):\n");  
+while (temp != NULL) {  
+printf("%d <-> ", temp->data);  
+temp = temp->next;  
+}  
+printf("NULL\n");  
+/* Backward traversal */  
+temp = p3;  
+printf("Doubly Linked List (Backward):\n");  
+while (temp != NULL) {  
 printf("%d <-> ", temp->data);
 
-temp = temp->prev;
-}
-printf("NULL\n");
-/* Free allocated memory */
-free(p1);
-free(p2);
-free(p3);
-return 0;
+temp = temp->prev;  
+}  
+printf("NULL\n");  
+/* Free allocated memory */  
+free(p1);  
+free(p2);  
+free(p3);  
+return 0;  
 }
 
 Applications of Linked Lists:
@@ -216,18 +231,3 @@ revised versions will be used thereafter.
 
 ---
 
-## 💻 Programs
-
-1. [`01_insert_at_beginning.c`](./01_insert_at_beginning.c) — Insert a node at the beginning of a singly linked list
-2. [`02_delete_from_end.c`](./02_delete_from_end.c) — Delete a node from the end of a singly linked list
-3. [`03_circular_singly_linked_list.c`](./03_circular_singly_linked_list.c) — Implement a circular singly linked list
-4. [`04_menu_driven_linked_list.c`](./04_menu_driven_linked_list.c) — Menu-driven program: insertion, deletion, traversal
-
-## 🛠️ How to compile & run
-
-```bash
-gcc 01_insert_at_beginning.c -o output
-./output
-```
-
-Run the same way for any of the other 3 files in this folder — just swap the filename.
