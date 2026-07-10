@@ -1,4 +1,21 @@
 # Searching Algorithms
+## 💻 Programs
+
+1. [`01_linear_search_count_comparisons.c`](./01_linear_search_count_comparisons.c) — Linear search modified to count number of comparisons
+2. [`02_binary_search_recursive.c`](./02_binary_search_recursive.c) — Binary search implemented using recursion
+3. [`03_search_with_input_validation.c`](./03_search_with_input_validation.c) — Search program with input validation
+4. [`04_compare_linear_vs_binary_time.c`](./04_compare_linear_vs_binary_time.c) — Compare execution time of linear search vs binary search
+5. [`05_search_multiple_elements.c`](./05_search_multiple_elements.c) — Search for multiple elements in a single run
+6. [`06_binary_search_first_last_occurrence.c`](./06_binary_search_first_last_occurrence.c) — Binary search modified to find first and last occurrence
+
+## 🛠️ How to compile & run
+
+```bash
+gcc 01_linear_search_count_comparisons.c -o output
+./output
+```
+
+Run the same way for any of the other 5 files in this folder — just swap the filename.
 
 ## 📖 Theory
 
@@ -442,21 +459,3 @@ Tasks:
 Modify linear search to count number of comparisons.
 
 ---
-
-## 💻 Programs
-
-1. [`01_linear_search_count_comparisons.c`](./01_linear_search_count_comparisons.c) — Linear search modified to count number of comparisons
-2. [`02_binary_search_recursive.c`](./02_binary_search_recursive.c) — Binary search implemented using recursion
-3. [`03_search_with_input_validation.c`](./03_search_with_input_validation.c) — Search program with input validation
-4. [`04_compare_linear_vs_binary_time.c`](./04_compare_linear_vs_binary_time.c) — Compare execution time of linear search vs binary search
-5. [`05_search_multiple_elements.c`](./05_search_multiple_elements.c) — Search for multiple elements in a single run
-6. [`06_binary_search_first_last_occurrence.c`](./06_binary_search_first_last_occurrence.c) — Binary search modified to find first and last occurrence
-
-## 🛠️ How to compile & run
-
-```bash
-gcc 01_linear_search_count_comparisons.c -o output
-./output
-```
-
-Run the same way for any of the other 5 files in this folder — just swap the filename.
