@@ -1,5 +1,23 @@
 # Stack Data Structure
 
+## 💻 Programs
+
+1. [`01_stack_using_array_menu.c`](./01_stack_using_array_menu.c) — Menu-driven stack implementation using array
+2. [`02_stack_using_linked_list_menu.c`](./02_stack_using_linked_list_menu.c) — Menu-driven stack implementation using linked list
+3. [`03_balanced_parentheses.c`](./03_balanced_parentheses.c) — Check for balanced parentheses using a stack
+4. [`04_infix_to_postfix.c`](./04_infix_to_postfix.c) — Convert an infix expression to postfix using a stack
+5. [`05_evaluate_postfix.c`](./05_evaluate_postfix.c) — Evaluate a postfix expression using a stack
+6. [`06_two_stacks_in_one_array.c`](./06_two_stacks_in_one_array.c) — Implement two stacks in a single array
+7. [`07_reverse_string_using_stack.c`](./07_reverse_string_using_stack.c) — Reverse a string using a stack
+
+## 🛠️ How to compile & run
+
+```bash
+gcc 01_stack_using_array_menu.c -o output
+./output
+```
+
+Run the same way for any of the other 6 files in this folder — just swap the filename.
 ## 📖 Theory
 
 Experiment 3: Stack Data Structure
@@ -81,48 +99,47 @@ C Program:
 int stack[MAX];
 int top = -1;
 ```
-/* Push */
-void push(int value) {
-if (top == MAX - 1) {
-printf("Stack Overflow\n");
-return;
-}
-stack[++top] = value;
-}
+/* Push */  
+void push(int value) {  
+if (top == MAX - 1) {  
+printf("Stack Overflow\n");  
+return;  
+}  
+stack[++top] = value;  
+}  
 /* Pop */
 
-void pop() {
-if (top == -1) {
-printf("Stack Underflow\n");
-return;
-}
-printf("Popped: %d\n", stack[top--]);
-}
-/* Peek */
-void peek() {
-if (top == -1)
-printf("Stack is empty\n");
-else
-printf("Top element: %d\n", stack[top]);
-}
-/* Display */
-void display() {
-if (top == -1) {
-printf("Stack empty\n");
-return;
-}
-for (int i = top; i >= 0; i--)
-printf("%d\n", stack[i]);
-}
-int main() {
-push(10);
-
-push(20);
-push(30);
-display();
-pop();
-peek();
-return 0;
+void pop() {  
+if (top == -1) {  
+printf("Stack Underflow\n");  
+return;  
+}  
+printf("Popped: %d\n", stack[top--]);  
+}  
+/* Peek */  
+void peek() {  
+if (top == -1)  
+printf("Stack is empty\n");  
+else  
+printf("Top element: %d\n", stack[top]);  
+}  
+/* Display */  
+void display() {  
+if (top == -1) {  
+printf("Stack empty\n");  
+return;  
+}  
+for (int i = top; i >= 0; i--)  
+printf("%d\n", stack[i]);  
+}  
+int main() {  
+push(10);  
+push(20);  
+push(30);  
+display();  
+pop();  
+peek();  
+return 0;  
 }
 
 Example Program 2: Stack using Linked List
@@ -146,53 +163,53 @@ struct Node *next;
 
 struct Node *top = NULL;
 ```
-/* Push */
-void push(int value) {
-struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));
-if (newNode == NULL) {
-printf("Overflow\n");
-return;
-}
-newNode->data = value;
-newNode->next = top;
-top = newNode;
-}
-/* Pop */
-void pop() {
-if (top == NULL) {
-printf("Underflow\n");
-return;
-}
-struct Node *temp = top;
-printf("Popped: %d\n", temp->data);
-top = top->next;
-free(temp);
+/* Push */  
+void push(int value) {  
+struct Node *newNode = (struct Node*)malloc(sizeof(struct Node));  
+if (newNode == NULL) {  
+printf("Overflow\n");  
+return;  
+}  
+newNode->data = value;  
+newNode->next = top;  
+top = newNode;  
+}  
+/* Pop */  
+void pop() {  
+if (top == NULL) {  
+printf("Underflow\n");  
+return;  
+}  
+struct Node *temp = top;  
+printf("Popped: %d\n", temp->data);  
+top = top->next;  
+free(temp);  
+}  
+
+/* Peek */  
+void peek() {  
+if (top == NULL)  
+printf("Stack empty\n");  
+else  
+printf("Top element: %d\n", top->data);  
+}  
+/* Display */  
+void display() {  
+struct Node *temp = top;  
+while (temp != NULL) {  
+printf("%d\n", temp->data);  
+temp = temp->next;  
+}  
 }
 
-/* Peek */
-void peek() {
-if (top == NULL)
-printf("Stack empty\n");
-else
-printf("Top element: %d\n", top->data);
-}
-/* Display */
-void display() {
-struct Node *temp = top;
-while (temp != NULL) {
-printf("%d\n", temp->data);
-temp = temp->next;
-}
-}
-
-int main() {
-push(5);
-push(15);
-push(25);
-display();
-pop();
-peek();
-return 0;
+int main() {  
+push(5);  
+push(15);  
+push(25);  
+display();  
+pop();  
+peek();  
+return 0;  
 }
 
 Applications of Stack:
@@ -223,23 +240,3 @@ Tasks
 6. Implement two stacks in one array
 7. Reverse a string using stack
 
----
-
-## 💻 Programs
-
-1. [`01_stack_using_array_menu.c`](./01_stack_using_array_menu.c) — Menu-driven stack implementation using array
-2. [`02_stack_using_linked_list_menu.c`](./02_stack_using_linked_list_menu.c) — Menu-driven stack implementation using linked list
-3. [`03_balanced_parentheses.c`](./03_balanced_parentheses.c) — Check for balanced parentheses using a stack
-4. [`04_infix_to_postfix.c`](./04_infix_to_postfix.c) — Convert an infix expression to postfix using a stack
-5. [`05_evaluate_postfix.c`](./05_evaluate_postfix.c) — Evaluate a postfix expression using a stack
-6. [`06_two_stacks_in_one_array.c`](./06_two_stacks_in_one_array.c) — Implement two stacks in a single array
-7. [`07_reverse_string_using_stack.c`](./07_reverse_string_using_stack.c) — Reverse a string using a stack
-
-## 🛠️ How to compile & run
-
-```bash
-gcc 01_stack_using_array_menu.c -o output
-./output
-```
-
-Run the same way for any of the other 6 files in this folder — just swap the filename.
