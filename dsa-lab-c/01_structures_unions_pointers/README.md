@@ -1,5 +1,22 @@
 # Structures, Unions & Pointers in C
 
+## 💻 Programs
+
+1. [`01_book_structure.c`](./01_book_structure.c) — Book structure — input & display 3 books
+2. [`02_employee_nested_structure.c`](./02_employee_nested_structure.c) — Employee structure with a nested Address structure
+3. [`03_union_temp_humidity.c`](./03_union_temp_humidity.c) — Union storing Temperature or Humidity — demonstrates shared memory
+4. [`04_swap_using_pointers.c`](./04_swap_using_pointers.c) — Swap two numbers using pointers
+5. [`05_array_of_pointers_cities.c`](./05_array_of_pointers_cities.c) — Array of pointers to store & print 5 city names
+6. [`06_matrix_pointer_to_array.c`](./06_matrix_pointer_to_array.c) — Read and print a 3×3 matrix using pointer to an array
+
+## 🛠️ How to compile & run
+
+```bash
+gcc 01_book_structure.c -o output
+./output
+```
+Run the same way for any of the other 5 files in this folder — just swap the filename.
+
 ## 📖 Theory
 
 Lab 1C: Structures, Unions & Pointers in C
@@ -192,99 +209,3 @@ printf("numbers[%d]: %d\n", i, (*ptr)[i]); // (*ptr)[i] accesses the i-th elemen
 return 0;
 }
 ```
-What Happens in Memory?
-
-The array elements are stored contiguously. The pointer ptr holds the starting address of the full
-array block.
-
-Why Use Pointer to an Array?
-Situation
-
-Benefit
-
-Passing 2D arrays to functions
-
-Maintains correct row size
-
-Working with fixed-size blocks
-
-Keeps array structure intact
-
-Matrix operations
-
-Easier pointer arithmetic
-
-Accessing Elements:
-Expression
-
-Meaning
-
-ptr
-
-Address of the whole array
-
-*ptr
-
-The entire array
-
-(*ptr)[i]
-
-i-th element of the array
-
-Pointer to Array vs Array of Pointers:
-Feature
-
-Pointer to Array
-
-Array of Pointers
-
-Points to
-
-Whole array
-
-Individual elements
-
-Memory
-
-One pointer
-
-Multiple pointers
-
-Use case
-
-Matrices, fixed blocks
-
-Strings, dynamic lists
-
-Tasks:
-1. Create a structure for Book with title, author, and price. Input and display 3 books.
-2. Create a structure Employee with name, ID and a nested structure Address (city, pin code).
-3. Create a union that stores either:
-- Temperature (float)
-
-- Humidity (int)
-
-Show how memory changes.
-4. Write a program to swap two numbers using pointers.
-5. Store names of 5 cities using array of pointers and print them.
-6. Take a 3×3 matrix and print it using a pointer to an array.
-
----
-
-## 💻 Programs
-
-1. [`01_book_structure.c`](./01_book_structure.c) — Book structure — input & display 3 books
-2. [`02_employee_nested_structure.c`](./02_employee_nested_structure.c) — Employee structure with a nested Address structure
-3. [`03_union_temp_humidity.c`](./03_union_temp_humidity.c) — Union storing Temperature or Humidity — demonstrates shared memory
-4. [`04_swap_using_pointers.c`](./04_swap_using_pointers.c) — Swap two numbers using pointers
-5. [`05_array_of_pointers_cities.c`](./05_array_of_pointers_cities.c) — Array of pointers to store & print 5 city names
-6. [`06_matrix_pointer_to_array.c`](./06_matrix_pointer_to_array.c) — Read and print a 3×3 matrix using pointer to an array
-
-## 🛠️ How to compile & run
-
-```bash
-gcc 01_book_structure.c -o output
-./output
-```
-
-Run the same way for any of the other 5 files in this folder — just swap the filename.
