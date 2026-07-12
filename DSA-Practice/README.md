@@ -14,5 +14,3 @@ Daily Data Structures & Algorithms practice in C.
 | `06-Tree` | Binary tree construction & traversals, BST operations, LCA, vertical order, zigzag, right view, symmetry check, mirror, min-heap check |
 | `07-Graph` | Adjacency matrix, adjacency list, DFS |
 | `Misc` | Misc test files |
-
-Each file is named `dayNN_short_description.c` based on the day it was written and what it implements.
